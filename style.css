@@ -115,13 +115,15 @@ body {
 .attribution {
   position: absolute;
   bottom: 0%;
-  left: 50vw;
-  transform: translateX(-50%);
+  left: 45%;
+  transform: translateX(-45%);
+  font-size: 0.5rem;
+  color: var(--grayblue);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .wrapper {
-    background-size: 40vw 20vh;
+    background-size: 35vw 15vh;
   }
 
   .testimonial {
@@ -170,7 +172,7 @@ body {
     background-position: 20% 0;
     z-index: 999;
     font-size: 1.9rem;
-    padding: 5vh 0;
+    padding: 5vh 0 3vh;
     width: 125%;
   }
 
@@ -182,5 +184,25 @@ body {
 
   .user__role {
     margin-left: 0.5rem;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .testimonial__text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+  .testimonial__text {
+    font-size: 1.2rem;
   }
 }
