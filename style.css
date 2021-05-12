@@ -18,7 +18,7 @@ body {
   position: relative;
   min-height: 100vh;
   color: var(--drkblue);
-  background-image: url('/images/pattern-curve.svg');
+  background-image: url('./images/pattern-curve.svg');
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 70vw 10vh;
@@ -33,7 +33,7 @@ body {
 }
 
 .image__container {
-  background-image: url('/images/pattern-bg.svg');
+  background-image: url('./images/pattern-bg.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -90,7 +90,7 @@ body {
 
 .testimonial__text {
   font-size: 0.9rem;
-  background-image: url(/images/pattern-quotes.svg);
+  background-image: url('./images/pattern-quotes.svg');
   background-repeat: no-repeat;
   background-size: 14vw 6vh;
   background-position: 50% 0;
