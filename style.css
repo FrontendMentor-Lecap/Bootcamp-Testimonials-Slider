@@ -23,6 +23,8 @@ body {
   background-position: bottom left;
   background-size: 70vw 10vh;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .testimonial {
@@ -63,6 +65,7 @@ body {
 .navigation .btn {
   background-color: white;
   border: none;
+  outline: none;
   padding: 0.5rem;
   width: 2.5rem;
   height: 2.5rem;
@@ -81,16 +84,16 @@ body {
 }
 
 .testimonial__container {
-  background-image: url(/images/pattern-quotes.svg);
-  background-repeat: no-repeat;
-  background-size: 14vw 6vh;
-  background-position: 50% 0;
   text-align: center;
   margin: 2rem 0;
 }
 
 .testimonial__text {
   font-size: 0.9rem;
+  background-image: url(/images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 14vw 6vh;
+  background-position: 50% 0;
   font-weight: 300;
   line-height: 1.4;
   padding: 7% 8vw 5%;
@@ -117,60 +120,67 @@ body {
 }
 
 @media (min-width: 900px) {
-  article {
+  .wrapper {
+    background-size: 40vw 20vh;
+  }
+
+  .testimonial {
     flex-direction: row-reverse;
-    max-width: 100rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vw;
+    max-width: 1320px;
   }
 
-  .image {
-    width: 44rem;
+  .image__container {
+    display: flex;
+    background-size: 100% 100%;
+    width: 135%;
+    align-items: center;
+    padding: 4rem;
+    height: auto;
   }
 
-  .image img {
-    width: 87%;
+  .image__div {
+    height: auto;
   }
 
   .navigation {
-    top: 75vh;
-    left: 63vw;
-    overflow: hidden;
-    width: 7vw;
+    left: 10%;
+    transform: none;
   }
 
-  .navigation img {
-    width: 2.3rem;
+  .navigation .btn {
+    width: 4rem;
+    height: 4rem;
   }
 
-  .prev:hover,
-  .next:hover {
-    background-color: var(--grayblue);
-  }
-
-  .content {
-    text-align: left;
-    background-size: 13vh;
-    background-position: 21vw 0;
-    padding: 2rem 0;
-    padding-left: 15vw;
-    overflow: visible;
-  }
-
-  blockquote {
-    font-size: 1.8rem;
-    width: 134%;
-    line-height: 1.4;
-  }
-
-  .name {
+  .testimonial__container {
+    height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 0 0 0 6vw;
   }
 
-  .job-title {
-    padding-left: 1rem;
+  .testimonial__text {
+    background-size: 8vw 10vh;
+    background-position: 20% 0;
+    z-index: 999;
+    font-size: 1.9rem;
+    padding: 5vh 0;
+    width: 125%;
   }
 
-  .attribution {
-    left: 50%;
-    transform: translateX(-50%);
+  .user__info {
+    display: flex;
+    justify-self: start;
+    font-size: 1rem;
+  }
+
+  .user__role {
+    margin-left: 0.5rem;
   }
 }

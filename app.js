@@ -13,7 +13,7 @@ const users = [
   {
     username: 'Tanya Sinclair',
     userrole: 'UX Engineer',
-    testimony: ` " I've been interested in coding for a while but never taken the jump, until now. I couldn't recommned this course enough. I'm now in th ejob of my dreams and so excited about the future." `,
+    testimony: ` " I've been interested in coding for a while but never taken the jump, until now. I couldn't recommned this course enough. I'm now in the job of my dreams and so excited about the future. " `,
     imgSrc: '/images/image-tanya.jpg',
   },
   {
@@ -54,7 +54,7 @@ const slideOut = count => {
 };
 
 const prevSlide = () => {
-  conter <= 0 ? (counter = users.length - 1) : counter--;
+  counter <= 0 ? (counter = users.length - 1) : counter--;
 
   slideOut(counter);
 };
