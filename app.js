@@ -39,6 +39,7 @@ const toggleActive = type => {
 const displayUser = userdata => {
   const { username, userrole, testimony, imgSrc } = userdata;
 
+  userImage.alt = username;
   userImage.src = imgSrc;
   userName.textContent = username;
   userRole.textContent = userrole;
