@@ -1,5 +1,3 @@
-let counter = 0;
-
 // Selectors
 const userImage = document.querySelector('.user__image');
 const userName = document.querySelector('.user__name');
@@ -25,16 +23,7 @@ const users = [
 ];
 
 // Functions
-const toggleActive = type => {
-  if (type === 'add') {
-    userImage.classList.add('active');
-    testimonialContainer.classList.add('active');
-  }
-  if (type === 'remove') {
-    userImage.classList.remove('active');
-    testimonialContainer.classList.remove('active');
-  }
-};
+let counter = 0;
 
 const displayUser = userdata => {
   const { username, userrole, testimony, imgSrc } = userdata;
@@ -45,30 +34,21 @@ const displayUser = userdata => {
   testimonialText.textContent = testimony;
 };
 
-const slideOut = count => {
-  toggleActive('remove');
-  setTimeout(() => {
-    displayUser(users[count]);
-    setTimeout(() => toggleActive('add'));
-  });
-};
-
 const prevSlide = () => {
   counter <= 0 ? (counter = users.length - 1) : counter--;
 
-  slideOut(counter);
+  displayUser(users[counter]);
 };
 
 const nextSlide = () => {
   counter >= users.length - 1 ? (counter = 0) : counter++;
 
-  slideOut(counter);
+  displayUser(users[counter]);
 };
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
   displayUser(users[counter]);
-  toggleActive('add');
 });
 
 prevBtn.addEventListener('click', prevSlide);
